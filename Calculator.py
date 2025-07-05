@@ -1,51 +1,69 @@
 def sum_ab(a,b):
-    if('.' not in a and '.' not in b):
-        print("{0} + {1} = {2}".format(int(float(a)), int(float(b)), (int(float(a))+int(float(b)))))
-    elif('.' in a and '.' in b):
-        print("{0} + {1} = {2}".format(float(a), float(b), (float(a)+float(b))))
-    elif('.' in a or '.' in b):
-        print("{0} + {1} = {2}".format(float(a), float(b), (float(a)+float(b))))
-    else:
-        print("Please enter number!")
+    try:
+        if('.' not in a and '.' not in b):
+            print("{0} + {1} = {2}".format(int(float(a)), int(float(b)), (int(float(a))+int(float(b)))))
+        elif('.' in a and '.' in b):
+            print("{0} + {1} = {2}".format(float(a), float(b), (float(a)+float(b))))
+        elif('.' in a or '.' in b):
+            print("{0} + {1} = {2}".format(float(a), float(b), (float(a)+float(b))))
+        else:
+            print("Please enter number!")
+    except  ValueError:
+        print("Please enter valid numbers!")
 def sub_ab(a,b):
-    if('.' not in a and '.' not in b):
-        print("{0} - {1} = {2}".format(int(float(a)), int(float(b)), (int(float(a))-int(float(b)))))
-    elif('.' in a and '.' in b):
-        print("{0} - {1} = {2}".format(float(a), float(b), (float(a)-float(b))))
-    elif('.' in a or '.' in b):
-        print("{0} - {1} = {2}".format(float(a), float(b), (float(a)-float(b))))
-    else:
-        print("Please enter number!")
+    try:
+        if('.' not in a and '.' not in b):
+            print("{0} - {1} = {2}".format(int(float(a)), int(float(b)), (int(float(a))-int(float(b)))))
+        elif('.' in a and '.' in b):
+            print("{0} - {1} = {2}".format(float(a), float(b), (float(a)-float(b))))
+        elif('.' in a or '.' in b):
+            print("{0} - {1} = {2}".format(float(a), float(b), (float(a)-float(b))))
+        else:
+            print("Please enter number!")
+    except  ValueError:
+        print("Please enter valid numbers!")
     
 def mul_ab(a,b):
-    if('.' not in a and '.' not in b):
-        print("{0} * {1} = {2}".format(int(float(a)), int(float(b)), (int(float(a))*int(float(b)))))
-    elif('.' in a and '.' in b):
-        print("{0} * {1} = {2}".format(float(a), float(b), (float(a)*float(b))))
-    elif('.' in a or '.' in b):
-        print("{0} * {1} = {2}".format(float(a), float(b), (float(a)*float(b))))
-    else:
-        print("Please enter number!")
+    try:
+        if('.' not in a and '.' not in b):
+            print("{0} * {1} = {2}".format(int(float(a)), int(float(b)), (int(float(a))*int(float(b)))))
+        elif('.' in a and '.' in b):
+            print("{0} * {1} = {2}".format(float(a), float(b), (float(a)*float(b))))
+        elif('.' in a or '.' in b):
+            print("{0} * {1} = {2}".format(float(a), float(b), (float(a)*float(b))))
+        else:
+            print("Please enter number!")
+    except ValueError:
+        print("Please enter valid numbers!")
 
 def div_ab(a,b):
-    if('.' not in a and '.' not in b):
-        print("{0} / {1} = {2}".format(int(float(a)), int(float(b)), (int(float(a))/int(float(b)))))
-    elif('.' in a and '.' in b):
-        print("{0} / {1} = {2}".format(float(a), float(b), (float(a)/float(b))))
-    elif('.' in a or '.' in b):
-        print("{0} / {1} = {2}".format(float(a), float(b), (float(a)/float(b))))
-    else:
-        print("Please enter number!")
-
+    try:
+        if(float(b) != 0):
+            if('.' not in a and '.' not in b):
+                print("{0} / {1} = {2}".format(int(float(a)), int(float(b)), (int(float(a))/int(float(b)))))
+            elif('.' in a and '.' in b):
+                print("{0} / {1} = {2}".format(float(a), float(b), (float(a)/float(b))))
+            elif('.' in a or '.' in b):
+                print("{0} / {1} = {2}".format(float(a), float(b), (float(a)/float(b))))
+            else:
+                print("Please enter number!")
+        else:
+            print("Division by zero error!")
+    except ValueError:
+        print("Please enter valid numbers!")
+        
 def pow_ab(a,b):
-    if('.' not in a and '.' not in b):
-        print("{0} ** {1} = {2}".format(int(float(a)), int(float(b)), (int(float(a))**int(float(b)))))
-    elif('.' in a and '.' in b):
-        print("{0} ** {1} = {2}".format(float(a), float(b), (float(a)**float(b))))
-    elif('.' in a or '.' in b):
-        print("{0} ** {1} = {2}".format(float(a), float(b), (float(a)**float(b))))
-    else:
-        print("Please enter number!")
+    try:
+        if('.' not in a and '.' not in b):
+            print("{0} ** {1} = {2}".format(int(float(a)), int(float(b)), (int(float(a))**int(float(b)))))
+        elif('.' in a and '.' in b):
+            print("{0} ** {1} = {2}".format(float(a), float(b), (float(a)**float(b))))
+        elif('.' in a or '.' in b):
+            print("{0} ** {1} = {2}".format(float(a), float(b), (float(a)**float(b))))
+        else:
+            print("Please enter number!")
+    except ValueError:
+        print("Please enter valid numbers!")
 
 a = str(input("Please enter first number: "))
 b = str(input("Please enter second number: "))
